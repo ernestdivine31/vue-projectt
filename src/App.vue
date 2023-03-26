@@ -8,7 +8,7 @@
 
 <script>
 // import '@/assets/tailwind.css';
-import Repositories from '@/assets/pages/Repositories.vue';
+import Repositories from '@/pages/Repositories.vue';
 export default {
   name: 'App',
   components: {
