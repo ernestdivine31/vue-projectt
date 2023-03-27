@@ -1,23 +1,23 @@
 <template>
   <div id="app">
-    <Repositories />
+    <Navbar />
+    <router-view></router-view>
   </div>
-    
-  
 </template>
 
 <script>
-// import '@/assets/tailwind.css';
-import Repositories from '@/pages/Repositories.vue';
+import { RouterView } from "vue-router";
+import Navbar from "./components/Navbar.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Repositories
+    Navbar,
+    RouterView,
   },
 };
 </script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap");
 *,
 *::before,
 *::after {
@@ -33,15 +33,14 @@ export default {
   width: calc(100% - 2rem);
   border: 1px solid red;
 }
-@media screen and (min-width: 600px) {  
+@media screen and (min-width: 600px) {
   .wrapper {
     width: calc(100% - 4rem);
   }
 }
 body {
   min-height: 100vh;
-  max-width:100%;
-  font-family: 'Sora', sans-serif;
+  max-width: 100%;
+  font-family: "Sora", sans-serif;
 }
-
 </style>
